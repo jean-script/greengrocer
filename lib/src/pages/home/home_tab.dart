@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
-import 'package:greengrocer/src/home/components/category_tile.dart';
+import 'package:greengrocer/src/pages/home/components/category_tile.dart';
+
+import 'package:greengrocer/src/config/app_data.dart' as appData;
+import 'package:greengrocer/src/pages/home/components/item_tile.dart';
 
 class HomeTab extends StatefulWidget {
-  HomeTab({super.key});
+  const HomeTab({super.key});
 
   @override
   State<HomeTab> createState() => _HomeTabState();
 }
 
 class _HomeTabState extends State<HomeTab> {
-  List<String> categories = [
-    'Frutas',
-    'Grãos',
-    'Verduras',
-    'Temperos',
-    'Careais'
-  ];
-
   String SelectedCategory = 'Frutas';
 
   @override
@@ -102,18 +97,37 @@ class _HomeTabState extends State<HomeTab> {
                 return CategoryTile(
                   onPressed: () {
                     setState(() {
-                      SelectedCategory = categories[index];
+                      SelectedCategory = appData.categories[index];
                     });
                   },
-                  category: categories[index],
-                  isSelectd: categories[index] == SelectedCategory,
+                  category: appData.categories[index],
+                  isSelectd: appData.categories[index] == SelectedCategory,
                 );
               },
               separatorBuilder: (_, index) => SizedBox(width: 10),
-              itemCount: categories.length,
+              itemCount: appData.categories.length,
             ),
           ),
           // Grid
+
+          Expanded(
+            child: GridView.builder(
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 16),
+              physics: BouncingScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: 9 / 11.5,
+              ),
+              itemCount: appData.items.length,
+              itemBuilder: (_, index) {
+                return ItemTile(
+                  item: appData.items[index],
+                );
+              },
+            ),
+          )
         ],
       ),
     );
