@@ -45,7 +45,7 @@ class ItemTile extends StatelessWidget {
                   // nome do produto
                   Text(
                     item.itemName,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
@@ -87,12 +87,12 @@ class ItemTile extends StatelessWidget {
               width: 35,
               decoration: BoxDecoration(
                 color: CustomColors.customSwatchColor,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(15),
                   topRight: Radius.circular(20),
                 ),
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.add_shopping_cart_outlined,
                 color: Colors.white,
                 size: 20,

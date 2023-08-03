@@ -5,7 +5,7 @@ import 'package:greengrocer/src/pages/commom_widgets/quantity_widget.dart';
 import 'package:greengrocer/src/services/ultis_services.dart';
 
 class ProductScreen extends StatefulWidget {
-  ProductScreen({
+  const ProductScreen({
     super.key,
     required this.item,
   });
@@ -37,7 +37,18 @@ class _ProductScreenState extends State<ProductScreen> {
               ),
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.all(32),
+                  padding: const EdgeInsets.all(32),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius:
+                        const BorderRadius.vertical(top: Radius.circular(50)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade600,
+                        offset: const Offset(0, 2),
+                      )
+                    ],
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -115,17 +126,6 @@ class _ProductScreenState extends State<ProductScreen> {
                       ),
                     ],
                   ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(50)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade600,
-                        offset: Offset(0, 2),
-                      )
-                    ],
-                  ),
                 ),
               )
             ],
@@ -138,7 +138,7 @@ class _ProductScreenState extends State<ProductScreen> {
             child: SafeArea(
               child: IconButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  icon: Icon(Icons.arrow_back_ios)),
+                  icon: const Icon(Icons.arrow_back_ios)),
             ),
           )
         ],

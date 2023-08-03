@@ -31,9 +31,9 @@ class SignInScreen extends StatelessWidget {
                     // texto greengrocer
                     Text.rich(
                       TextSpan(
-                        style: TextStyle(fontSize: 40),
+                        style: const TextStyle(fontSize: 40),
                         children: [
-                          TextSpan(
+                          const TextSpan(
                             text: 'Green',
                             style: TextStyle(
                               color: Colors.white,
@@ -54,7 +54,7 @@ class SignInScreen extends StatelessWidget {
                     SizedBox(
                       height: 30,
                       child: DefaultTextStyle(
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 25,
                         ),
                         child: AnimatedTextKit(
@@ -78,8 +78,9 @@ class SignInScreen extends StatelessWidget {
               // formulario
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 32, vertical: 40),
-                  decoration: BoxDecoration(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(45)),
@@ -88,13 +89,13 @@ class SignInScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       //email
-                      CustomTextField(
+                      const CustomTextField(
                         icon: Icons.email,
                         label: 'Email',
                       ),
 
                       //senha
-                      CustomTextField(
+                      const CustomTextField(
                         icon: Icons.lock,
                         label: 'Senha',
                         isSecret: true,
@@ -111,11 +112,11 @@ class SignInScreen extends StatelessWidget {
                           onPressed: () {
                             Navigator.of(context).pushReplacement(
                               MaterialPageRoute(builder: (c) {
-                                return BaseScreen();
+                                return const BaseScreen();
                               }),
                             );
                           },
-                          child: Text(
+                          child: const Text(
                             'Entrar',
                             style: TextStyle(fontSize: 18),
                           ),
@@ -145,9 +146,8 @@ class SignInScreen extends StatelessWidget {
                                 thickness: 2,
                               ),
                             ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 15),
+                            const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 15),
                               child: Text('Or'),
                             ),
                             Expanded(
@@ -167,7 +167,7 @@ class SignInScreen extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18),
                               ),
-                              side: BorderSide(
+                              side: const BorderSide(
                                 width: 2,
                                 color: Colors.green,
                               )),
@@ -177,7 +177,7 @@ class SignInScreen extends StatelessWidget {
                               return SignUpScreen();
                             }));
                           },
-                          child: Text(
+                          child: const Text(
                             'Criar conta',
                             style: TextStyle(fontSize: 18),
                           ),

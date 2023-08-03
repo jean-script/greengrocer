@@ -29,7 +29,7 @@ class SignUpScreen extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: Center(
                       child: Text(
                         'Cadastro',
@@ -43,8 +43,9 @@ class SignUpScreen extends StatelessWidget {
 
                   //formulario
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 32, vertical: 40),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 32, vertical: 40),
+                    decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(45))),
@@ -52,12 +53,14 @@ class SignUpScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         // campo de email
-                        CustomTextField(icon: Icons.email, label: 'Email'),
+                        const CustomTextField(
+                            icon: Icons.email, label: 'Email'),
                         // campo de senha
-                        CustomTextField(
+                        const CustomTextField(
                             icon: Icons.lock, label: 'Senha', isSecret: true),
                         // campo de Nome
-                        CustomTextField(icon: Icons.person, label: 'Nome'),
+                        const CustomTextField(
+                            icon: Icons.person, label: 'Nome'),
                         // campo de Celular
                         CustomTextField(
                           icon: Icons.phone,
@@ -80,7 +83,7 @@ class SignUpScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(18)),
                             ),
                             onPressed: () {},
-                            child: Text(
+                            child: const Text(
                               'Cadastrar usuário',
                               style: TextStyle(
                                 fontSize: 18,
@@ -105,7 +108,7 @@ class SignUpScreen extends StatelessWidget {
                           // fecha a tela que esta acima
                           Navigator.of(context).pop();
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_back_ios,
                           color: Colors.white,
                         ))),

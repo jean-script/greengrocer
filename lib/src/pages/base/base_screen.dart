@@ -17,10 +17,10 @@ class _BaseScreenState extends State<BaseScreen> {
     return Scaffold(
       body: PageView(
         // faz com que não de para rolar com dedo(mouse)
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          HomeTab(),
+          const HomeTab(),
           Container(color: Colors.yellow),
           Container(color: Colors.blue),
           Container(color: Colors.purple)
@@ -41,7 +41,7 @@ class _BaseScreenState extends State<BaseScreen> {
         backgroundColor: Colors.green,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white.withAlpha(100),
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             label: 'Home',

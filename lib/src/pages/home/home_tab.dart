@@ -25,7 +25,7 @@ class _HomeTabState extends State<HomeTab> {
         centerTitle: true,
         title: Text.rich(
           TextSpan(
-            style: TextStyle(fontSize: 30),
+            style: const TextStyle(fontSize: 30),
             children: [
               TextSpan(
                   text: 'Green',
@@ -43,7 +43,7 @@ class _HomeTabState extends State<HomeTab> {
               onTap: () {},
               child: Badge(
                 backgroundColor: CustomColors.customConstrastColor,
-                label: Text(
+                label: const Text(
                   '2',
                   style: TextStyle(fontSize: 12),
                 ),
@@ -89,7 +89,7 @@ class _HomeTabState extends State<HomeTab> {
           ),
           // categorias
           Container(
-            padding: EdgeInsets.only(left: 25),
+            padding: const EdgeInsets.only(left: 25),
             height: 40,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
@@ -104,7 +104,7 @@ class _HomeTabState extends State<HomeTab> {
                   isSelectd: appData.categories[index] == SelectedCategory,
                 );
               },
-              separatorBuilder: (_, index) => SizedBox(width: 10),
+              separatorBuilder: (_, index) => const SizedBox(width: 10),
               itemCount: appData.categories.length,
             ),
           ),
@@ -112,8 +112,8 @@ class _HomeTabState extends State<HomeTab> {
 
           Expanded(
             child: GridView.builder(
-              padding: EdgeInsets.fromLTRB(16, 0, 16, 16),
-              physics: BouncingScrollPhysics(),
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+              physics: const BouncingScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 10,

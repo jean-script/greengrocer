@@ -16,7 +16,7 @@ class QuantityWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(4),
+      padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(50),
@@ -31,7 +31,7 @@ class QuantityWidget extends StatelessWidget {
       child: Row(
         children: [
           // botão de diminuir
-          _Quantity_button(
+          _QuantityButton(
             icon: Icons.remove,
             color: Colors.grey,
             onPressed: () {
@@ -47,7 +47,7 @@ class QuantityWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 6),
             child: Text(
               '$value $suffixText',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
@@ -55,7 +55,7 @@ class QuantityWidget extends StatelessWidget {
           ),
 
           // botão de aumentar
-          _Quantity_button(
+          _QuantityButton(
             icon: Icons.add,
             color: CustomColors.customSwatchColor,
             onPressed: () {
@@ -69,12 +69,12 @@ class QuantityWidget extends StatelessWidget {
   }
 }
 
-class _Quantity_button extends StatelessWidget {
+class _QuantityButton extends StatelessWidget {
   final Color color;
   final IconData icon;
   final VoidCallback onPressed;
 
-  const _Quantity_button({
+  const _QuantityButton({
     required this.color,
     required this.icon,
     required this.onPressed,
