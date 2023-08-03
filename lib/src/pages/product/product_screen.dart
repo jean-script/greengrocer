@@ -60,7 +60,7 @@ class _ProductScreenState extends State<ProductScreen> {
                               widget.item.itemName,
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 27,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -95,7 +95,7 @@ class _ProductScreenState extends State<ProductScreen> {
                           child: SingleChildScrollView(
                             child: Text(
                               widget.item.description,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 height: 1.5,
                               ),
                             ),
@@ -111,14 +111,14 @@ class _ProductScreenState extends State<ProductScreen> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
                           onPressed: () {},
-                          label: Text(
+                          label: const Text(
                             'Add no carrinho',
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.shopping_cart_outlined,
                             color: Colors.white,
                           ),

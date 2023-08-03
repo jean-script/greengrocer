@@ -13,7 +13,7 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
-  String SelectedCategory = 'Frutas';
+  String selectedCategory = 'Frutas';
 
   @override
   Widget build(BuildContext context) {
@@ -97,11 +97,11 @@ class _HomeTabState extends State<HomeTab> {
                 return CategoryTile(
                   onPressed: () {
                     setState(() {
-                      SelectedCategory = appData.categories[index];
+                      selectedCategory = appData.categories[index];
                     });
                   },
                   category: appData.categories[index],
-                  isSelectd: appData.categories[index] == SelectedCategory,
+                  isSelectd: appData.categories[index] == selectedCategory,
                 );
               },
               separatorBuilder: (_, index) => const SizedBox(width: 10),
