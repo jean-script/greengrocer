@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/src/config/app_data.dart' as appData;
+import 'package:greengrocer/src/config/app_data.dart' as app_data;
 import 'package:greengrocer/src/config/custom_colors.dart';
 import 'package:greengrocer/src/models/cart_item_model.dart';
 import 'package:greengrocer/src/pages/cart/components/cart_tile.dart';
@@ -17,13 +17,13 @@ class _CartTabState extends State<CartTab> {
 
   void removeItemFromCart(CartItemModel cartItem) {
     setState(() {
-      appData.cartItems.remove(cartItem);
+      app_data.cartItems.remove(cartItem);
     });
   }
 
   double cartTotalPrice() {
     double total = 0;
-    for (var item in appData.cartItems) {
+    for (var item in app_data.cartItems) {
       total += item.totalPrice();
     }
     return total;
@@ -40,10 +40,10 @@ class _CartTabState extends State<CartTab> {
           // lista de itens do carrinho
           Expanded(
             child: ListView.builder(
-              itemCount: appData.cartItems.length,
+              itemCount: app_data.cartItems.length,
               itemBuilder: (_, index) {
                 return CartTile(
-                  cartItem: appData.cartItems[index],
+                  cartItem: app_data.cartItems[index],
                   remove: removeItemFromCart,
                 );
               },
