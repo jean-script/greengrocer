@@ -25,7 +25,7 @@ class _BaseScreenState extends State<BaseScreen> {
           const HomeTab(),
           const CartTab(),
           Container(color: Colors.blue),
-          const ProfileTab()
+          ProfileTab()
         ],
       ),
       // menu da parte de baixo do app
