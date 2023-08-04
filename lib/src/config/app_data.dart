@@ -130,15 +130,61 @@ List<OrderModel> orders = [
       '2022-06-08 10:00:10.458',
     ),
     overdueDateTime: DateTime.parse(
-      '2022-06-08 11:00:10.458',
+      '2024-06-08 11:00:10.458',
     ),
     id: 'a65s4d6a2s1d6a5s',
-    status: 'delivered',
+    status: 'pending_payment',
     total: 11.5,
     items: [
       CartItemModel(
         item: guava,
         quantity: 1,
+      ),
+    ],
+  ),
+
+  //pedido 3
+
+  OrderModel(
+    copyAndPaste: 'q1w2e3r4t5y6',
+    createdDateTime: DateTime.parse(
+      '2022-06-08 10:00:10.458',
+    ),
+    overdueDateTime: DateTime.parse(
+      '2024-06-08 11:00:10.458',
+    ),
+    id: 'a65s4d6a2s1d6a5s',
+    status: 'preparing_purchase',
+    total: 11.5,
+    items: [
+      CartItemModel(
+        item: guava,
+        quantity: 1,
+      ),
+    ],
+  ),
+
+  //pedido 3
+
+  OrderModel(
+    copyAndPaste: 'q1w2e3r4t5y6',
+    createdDateTime: DateTime.parse(
+      '2022-06-08 10:00:10.458',
+    ),
+    overdueDateTime: DateTime.parse(
+      '2024-06-08 11:00:10.458',
+    ),
+    id: 'a65s4d6a2s1d6a5s',
+    status: 'pending_payment',
+    total: 11.5,
+    items: [
+      CartItemModel(
+        item: grape,
+        quantity: 1,
+      ),
+      CartItemModel(
+        item: apple,
+        quantity: 3,
       ),
     ],
   ),
