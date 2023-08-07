@@ -96,6 +96,7 @@ UserModel user = UserModel(
   cpf: '123456789',
   email: 'jean.aires21@gmail.com',
   password: '123123',
+  
 );
 
 List<OrderModel> orders = [

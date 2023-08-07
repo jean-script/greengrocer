@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/src/pages/auth/sign_in_screen.dart';
+import 'package:greengrocer/src/pages/auth/view/sign_in_screen.dart';
 import 'package:greengrocer/src/pages/commom_widgets/custom_text_field.dart';
 import 'package:greengrocer/src/config/app_data.dart' as app_data;
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
@@ -36,7 +36,7 @@ class _ProfileTabState extends State<ProfileTab> {
             onPressed: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(builder: (c) {
-                  return const SignInScreen();
+                  return SignInScreen();
                 }),
               );
             },
