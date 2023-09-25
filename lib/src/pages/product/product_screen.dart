@@ -17,7 +17,7 @@ class ProductScreen extends StatefulWidget {
 }
 
 class _ProductScreenState extends State<ProductScreen> {
-  final UltisServices ultisServices = UltisServices();
+  final UtilsServices ultisServices = UtilsServices();
 
   int cartItemQuantity = 1;
 

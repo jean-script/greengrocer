@@ -9,7 +9,7 @@ class ItemTile extends StatelessWidget {
 
   final ItemModel item;
 
-  final UltisServices ultisServices = UltisServices();
+  final UtilsServices ultisServices = UtilsServices();
 
   @override
   Widget build(BuildContext context) {
